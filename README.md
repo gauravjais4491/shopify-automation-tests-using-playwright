@@ -1,1 +1,1 @@
-# shopify-automation-tests-using-playwright
+# shopify-playwright-browserstack-automation
