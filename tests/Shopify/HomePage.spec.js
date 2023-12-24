@@ -29,8 +29,6 @@ test("should place an order", async ({ page }) => {
 
     const paymentDetailsPage = PaymentDetailsPage.createInstance(page)
     await paymentDetailsPage.addPaymentDeatils(data.cardNumber,data.nameOnCard,data.expiry,data.cvv)
-    await page.pause()
-
 })
 
 
