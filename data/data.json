@@ -1,0 +1,14 @@
+{
+    "cardNumber":"1125",
+    "expiry":"01/25",
+    "cvv":"123",
+    "nameOnCard":"Gaurav",
+    "email":"gaurav@example.com",
+    "firstName":"Gaurav",
+    "lastName":"Jaiswal",
+    "address":"TestVagrant Technology",
+    "city":"Banglore",
+    "state":"Karnataka",
+    "postalCode":"560078",
+    "productName":"ADIDAS | KID'S STAN SMITH"
+}
