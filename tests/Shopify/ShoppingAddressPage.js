@@ -2,6 +2,9 @@ class ShoppingAddressPage {
     constructor(page) {
         this.page = page
     }
+    static createInstance(page) {
+        return new ShoppingAddressPage(page);
+    }
     get addEmailInTextBox(){
         return this.page.locator("#email")
     }

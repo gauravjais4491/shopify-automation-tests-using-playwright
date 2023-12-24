@@ -14,26 +14,22 @@ test("should place an order", async ({ page }) => {
     await page.locator('.header__icon.header__icon--menu.header__icon--summary.link.focus-inset').click()
     await page.locator(`//a[contains(text(),'Catalog')]`).click()
 
-    const catalogPage = new CatalogPage(page,data.productName)
+    const catalogPage = CatalogPage.createInstance(page,data.productName)
     await catalogPage.goToProductDetailsPage()
 
-    const productDetailsPage = new ProductDetailsPage(page);
+    const productDetailsPage = ProductDetailsPage.createInstance(page);
     await productDetailsPage.addProductToCart()
 
-    const viewCartPage = new ViewCartPage(page)
+    const viewCartPage = ViewCartPage.createInstance(page)
     await viewCartPage.goToShoppingAddressPage();
 
-    const shoppingAddressPage = new ShoppingAddressPage(page)
+    const shoppingAddressPage = ShoppingAddressPage.createInstance(page)
     await shoppingAddressPage.addContactDetails(data.email)
     await shoppingAddressPage.addShippingAddress(data.firstName,data.lastName,data.address,data.city,data.state,data.postalCode)
 
-    const paymentDetailsPage = new PaymentDetailsPage(page)
+    const paymentDetailsPage = PaymentDetailsPage.createInstance(page)
     await paymentDetailsPage.addPaymentDeatils(data.cardNumber,data.nameOnCard,data.expiry,data.cvv)
     await page.pause()
-
-    // await browser.url("/")
-    // await browser.pause(10000)
-    // await browser.pause(10000)
 
 })
 

@@ -2,6 +2,9 @@ class ViewCartPage {
     constructor(page){
         this.page = page
     }
+    static createInstance(page) {
+        return new ViewCartPage(page);
+    }
     get cartNotificationButton(){
         return this.page.locator("#cart-notification-button");
     }

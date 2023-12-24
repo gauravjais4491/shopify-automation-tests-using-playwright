@@ -2,6 +2,9 @@ class PaymentDetailsPage {
     constructor(page) {
         this.page = page
     }
+    static createInstance(page) {
+        return new PaymentDetailsPage(page);
+    }
     get iframe_number() {
         return this.page.frameLocator("//*[@class='card-fields-iframe' and @title='Field container for: Card number']");
     }
@@ -29,6 +32,7 @@ class PaymentDetailsPage {
     get verification_value() {
         return this.iframe_Security.locator(`[name="verification_value"]`)
     }
+    
     async addPaymentDeatils(cardNumber, nameOnCard, expiry, cvv) {
 
         await this.number.type(cardNumber, { delay: 100 })

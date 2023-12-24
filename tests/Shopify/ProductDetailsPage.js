@@ -2,6 +2,9 @@ class ProductDetailsPage {
     constructor(page) {
         this.page = page
     }
+    static createInstance(page) {
+        return new ProductDetailsPage(page);
+    }
     get quantity__input(){
         return this.page.locator(".quantity__input");
     }

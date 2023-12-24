@@ -5,6 +5,9 @@ class CatalogPage {
         this.page = page
         this.productName = productName
     }
+    static createInstance(page,productName) {
+        return new CatalogPage(page,productName);
+    }
     get product(){
         return this.page.locator(`.full-unstyled-link:has-text("${this.productName}"):visible`)
     }
