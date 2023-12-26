@@ -9,7 +9,7 @@ const { test, expect } = require('@playwright/test');
 
 test("should place an order", async ({ page }) => {
 
-    await page.goto('https://testvagrant.myshopify.com/');
+    await page.goto(data.websiteLink);
 
     await page.locator('.header__icon.header__icon--menu.header__icon--summary.link.focus-inset').click()
     await page.locator(`//a[contains(text(),'Catalog')]`).click()
