@@ -12,7 +12,7 @@ class ShoppingAddressPage {
         return this.page.locator("#marketing_opt_in")
     }
     async addContactDetails(email) {
-        await this.addEmailInTextBox.type(email, { delay: 100 })
+        await this.addEmailInTextBox.fill(email)
         await this.checkUpdateNewsAndOfferButton.click()
     };
 
@@ -41,11 +41,11 @@ class ShoppingAddressPage {
         return this.page.locator("[name=save_shipping_information]")
     }
     async addShippingAddress(firstName, lastName, address, city, state, postalCode) {
-        await this.addFirstName.type(firstName, { delay: 100 })
+        await this.addFirstName.fill(firstName)
 
-        await this.addLastName.type(lastName, { delay: 100 })
+        await this.addLastName.fill(lastName)
 
-        await this.addDeliveryAddress.type(address, { delay: 100 })
+        await this.addDeliveryAddress.fill(address)
         await this.suggestionBox.click({ force: true })
 
         await this.addCity.fill(city)

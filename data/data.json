@@ -1,15 +1,32 @@
-{
-    "websiteLink":"https://testvagrant.myshopify.com/",
-    "cardNumber":"1125",
-    "expiry":"01/25",
-    "cvv":"123",
-    "nameOnCard":"Gaurav",
-    "email":"gaurav@example.com",
-    "firstName":"Gaurav",
-    "lastName":"Jaiswal",
-    "address":"TestVagrant",
-    "city":"Banglore",
-    "state":"Karnataka",
-    "postalCode":"560078",
-    "productName":"ADIDAS | KID'S STAN SMITH"
-}
+[
+    {
+        "websiteLink": "https://testvagrant.myshopify.com/",
+        "cardNumber": "1125",
+        "expiry": "01/25",
+        "cvv": "123",
+        "nameOnCard": "Gaurav",
+        "email": "gaurav@example.com",
+        "firstName": "Gaurav",
+        "lastName": "Jaiswal",
+        "address": "TestVagrant",
+        "city": "Banglore",
+        "state": "Karnataka",
+        "postalCode": "560078",
+        "productName": "ADIDAS | KID'S STAN SMITH"
+    },
+    {
+        "websiteLink": "https://testvagrant.myshopify.com/",
+        "cardNumber": "1125",
+        "expiry": "01/25",
+        "cvv": "123",
+        "nameOnCard": "Gaurav",
+        "email": "gaurav2@example.com",
+        "firstName": "Gaurav2",
+        "lastName": "Jaiswal",
+        "address": "TestVagrant",
+        "city": "Banglore",
+        "state": "Karnataka",
+        "postalCode": "560078",
+        "productName": "Animal Zone Stegosaurus"
+    }
+]

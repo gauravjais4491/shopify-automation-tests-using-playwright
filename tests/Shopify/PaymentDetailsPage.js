@@ -35,10 +35,10 @@ class PaymentDetailsPage {
 
     async addPaymentDeatils(cardNumber, nameOnCard, expiry, cvv) {
 
-        await this.number.type(cardNumber, { delay: 100 })
+        await this.number.fill(cardNumber)
         await this.name.fill(nameOnCard)
-        await this.expiryDate.type(expiry, { delay: 100 })
-        await this.verification_value.type(cvv, { delay: 100 })
+        await this.expiryDate.fill(expiry)
+        await this.verification_value.fill(cvv)
         await this.payBtn.click({
             force: true
         })
