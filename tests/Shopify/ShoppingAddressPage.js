@@ -28,6 +28,9 @@ class ShoppingAddressPage {
     get suggestionBox() {
         return this.page.locator(`[id="shipping-address1-option-0"]`)
     }
+    get waitForDataLoad() {
+        return this.page.locator('[id="shipping_methods"]')
+    }
     get addCity() {
         return this.page.locator(`[class='_1frageme0']`).locator('>div').locator(`>[name="city"]`)
     }
@@ -47,15 +50,16 @@ class ShoppingAddressPage {
 
         await this.addDeliveryAddress.fill(address)
         await this.suggestionBox.click({ force: true })
+        await this.waitForDataLoad.waitFor('attached')
 
         await this.addCity.fill(city)
 
-        await this.addState.click()
+        await this.addState.click({ force: true })
         await this.addState.selectOption(state)
 
         await this.addPostalCode.fill(postalCode)
 
         await this.addInformationForNextTime.click()
-    };
+    };  
 }
 export { ShoppingAddressPage }
