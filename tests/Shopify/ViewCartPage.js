@@ -1,14 +1,14 @@
 class ViewCartPage {
-    constructor(page){
+    constructor(page) {
         this.page = page
     }
     static createInstance(page) {
         return new ViewCartPage(page);
     }
-    get cartNotificationButton(){
+    get cartNotificationButton() {
         return this.page.locator("#cart-notification-button");
     }
-    get checkoutBtn(){
+    get checkoutBtn() {
         return this.page.locator("#checkout");
     }
     async goToShoppingAddressPage() {

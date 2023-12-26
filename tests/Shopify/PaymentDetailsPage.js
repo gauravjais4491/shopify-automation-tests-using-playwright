@@ -32,7 +32,7 @@ class PaymentDetailsPage {
     get verification_value() {
         return this.iframe_Security.locator(`[name="verification_value"]`)
     }
-    
+
     async addPaymentDeatils(cardNumber, nameOnCard, expiry, cvv) {
 
         await this.number.type(cardNumber, { delay: 100 })
