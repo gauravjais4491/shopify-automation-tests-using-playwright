@@ -48,12 +48,12 @@ class ShoppingAddressPage {
         await this.addDeliveryAddress.type(address, { delay: 100 })
         await this.suggestionBox.click({ force: true })
 
-        await this.addCity.type(city, { delay: 100 })
+        await this.addCity.fill(city)
 
         await this.addState.click()
         await this.addState.selectOption(state)
 
-        await this.addPostalCode.type(postalCode, { delay: 100 })
+        await this.addPostalCode.fill(postalCode)
 
         await this.addInformationForNextTime.click()
     };
