@@ -4,7 +4,7 @@ import { ViewCartPage } from "./ViewCartPage";
 import { ShoppingAddressPage } from "./ShoppingAddressPage";
 import { PaymentDetailsPage } from "./PaymentDetailsPage";
 import dataset from '../../data/data.json'
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
 
 for (const data of dataset) {
     test(`should place an order with product name ' ${data.productName} '`, async ({ page }) => {
